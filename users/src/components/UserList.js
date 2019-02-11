@@ -3,7 +3,13 @@ import React from 'react';
 function UserList(props){
     return(
         <div>
-            <h3>Users go here</h3>
+            {props.users.map(user => (
+                <div key={user.id}>
+                {user.name}
+                {user.bio}
+                <button onClick={() => props.deleteUser(user.id)}>Delete This User</button>
+                </div>
+            ))}
         </div>
     );
 }
