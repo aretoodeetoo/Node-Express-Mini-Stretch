@@ -34,4 +34,4 @@ const users = (state = initialState, action) => {
     }
 }
 
-export default friends;
+export default users;
