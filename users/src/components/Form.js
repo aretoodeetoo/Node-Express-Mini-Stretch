@@ -5,14 +5,19 @@ function Form(props){
         <form>
             <input 
             type="text"
+            onChange={props.changeHandler}
             name="name"
-            value={props.name}
+            value={props.user.name}
+            placeholder="Add User Name"
             />
             <input 
             type="text"
+            onChange={props.changeHandler}
             name="bio"
-            value={props.bio}
+            value={props.user.bio}
+            placeholder="Add User Bio"
             />
+            <button onClick={() => props.addUser()}>Add New User</button>
         </form>
     );
 }

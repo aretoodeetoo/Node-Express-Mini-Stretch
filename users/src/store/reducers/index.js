@@ -6,7 +6,9 @@ import {
 
 const initialState = {
     users: [],
-    isAddingUser: false
+    isAddingUser: false,
+    name: '',
+    bio: ''
 }
 
 const users = (state = initialState, action) => {

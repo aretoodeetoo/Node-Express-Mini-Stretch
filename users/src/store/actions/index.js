@@ -12,6 +12,8 @@ export const DELETE_USER_START = 'DELETE_USER_START';
 export const DELETE_USER_SUCCESS = 'DELETE_USER_SUCCESS';
 export const DELETE_USER_FAIL = 'DELETE_USER_FAIL';
 
+export const HANDLE_CHANGE = 'HANDLE_CHANGE';
+
 export const getUserList = () => dispatch => {
     dispatch ({ type: FETCH_USERS_START });
     axios
@@ -42,3 +44,11 @@ export const deleteUser = userId => dispatch => {
         }))
         .catch(err => dispatch({ type: DELETE_USER_FAIL, payload: err }));
 }
+
+export const handleChange = (name, value) => ({
+    type: HANDLE_CHANGE,
+    payload: {
+        name,
+        value
+    }
+})
